@@ -1,7 +1,8 @@
 name: CI-First
 
-on: 
-  push: ["master"]
+on:
+  push:
+    branches: ["master"]
 
 
 jobs: 
