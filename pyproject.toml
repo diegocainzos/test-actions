@@ -1,0 +1,26 @@
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build"
+
+[project]
+name = "algo-pkg"
+version = "0.1.0"
+description = "Paquete de ejemplo con algoritmo configurable"
+requires-python = ">=3.9"
+authors = [{name = "Diego", email = "diego@example.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["algorithm", "configurable", "example"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://example.com/algo-pkg"
+Repository = "https://github.com/diego/algo-pkg"
+
+[tool.uv]
+# Opcionales: especificar dependencias de desarrollo o extras
+# dev-dependencies = ["pytest", "black"]

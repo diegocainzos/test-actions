@@ -1,0 +1,13 @@
+name: CI-First
+
+on: 
+  push: ["main"]
+
+
+jobs: 
+  first: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World"
