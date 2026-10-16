@@ -14,3 +14,4 @@ jobs:
       - run: uv python install
       - run: uv sync --locked
       - run: uv run ruff check .
+      - run: uv run ruff format --check .

@@ -47,6 +47,7 @@ def compute(values: Iterable[float], cfg: Config | None = None) -> list[float]:
     cfg = cfg or Config()
     return [v * cfg.factor + cfg.offset for v in values]
 
+
 # Ejemplo rápido ejecutable al importar el módulo
 if __name__ == "__main__":
     default = compute([1, 2, 3])
