@@ -3,12 +3,14 @@ name: CI-First
 on:
   push:
     branches: ["master"]
+  pull_request:
 
-
-jobs: 
-  first: 
+jobs:
+  check:
     runs-on: ubuntu-latest
-
     steps:
-      - name: "Hello World"
-        run: echo "Hello World"
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v7
+      - run: uv python install
+      - run: uv sync --locked
+      - run: uv run ruff check .
