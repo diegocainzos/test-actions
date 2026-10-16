@@ -6,8 +6,9 @@ un objeto ``Config``.  Es suficiente para demostrar cómo se empaqueta el
 código como artefacto con *uv*.
 """
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable, List
+
 
 @dataclass
 class Config:
@@ -25,7 +26,7 @@ class Config:
     offset: float = 0.0
 
 
-def compute(values: Iterable[float], cfg: Config | None = None) -> List[float]:
+def compute(values: Iterable[float], cfg: Config | None = None) -> list[float]:
     """Aplica una transformación sencilla a una secuencia de números.
 
     La operación es ``result = value * factor + offset`` para cada elemento.
@@ -40,7 +41,7 @@ def compute(values: Iterable[float], cfg: Config | None = None) -> List[float]:
 
     Returns
     -------
-    List[float]
+    list[float]
         Lista con los resultados transformados.
     """
     cfg = cfg or Config()

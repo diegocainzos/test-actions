@@ -28,7 +28,11 @@ Repository = "https://github.com/diego/algo-pkg"
 # Opcionales: especificar dependencias de desarrollo o extras
 # dev-dependencies = ["pytest", "black"]
 
-
-
 [tool.uv.build-backend]
 module-root = ""
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"] 
